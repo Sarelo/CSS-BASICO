@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora em Python</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora em Python</h1>
+        <form id="calcForm">
+            <div class="form-group">
+                <label for="num1">Número 1:</label>
+                <input type="text" id="num1" name="num1" required>
+            </div>
+            <div class="form-group">
+                <label for="num2">Número 2:</label>
+                <input type="text" id="num2" name="num2" required>
+            </div>
+            <div class="form-group">
+                <label for="operacao">Operação:</label>
+                <select id="operacao" name="operacao" required>
+                    <option value="adição">Adição</option>
+                    <option value="subtração">Subtração</option>
+                    <option value="multiplicação">Multiplicação</option>
+                    <option value="divisão">Divisão</option>
+                </select>
+            </div>
+            <button type="submit">Calcular</button>
+        </form>
+        <div id="resultado" class="resultado"></div>
+    </div>
+
+    <script>
+        document.getElementById('calcForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            fetch('/calculate', {
+                method: 'POST',
+                body: JSON.stringify(Object.fromEntries(formData)),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('resultado').textContent = 'Resultado: ' + data.resultado;
+            });
+        });
+    </script>
+</body>
+</html>
