@@ -1,45 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>2024.2 - ADS - 2024</title>
-  </head>
-  <body>
-    <header>
-      <h1>ADS - 2024</h1>
-    </header>
-    <section class="container">
-      <p class="curso-descricao">
-        O curso de Análise e Desenvolvimento de Sistemas (ADS) é uma formação
-        superior que visa capacitar os alunos para atuar na criação,
-        desenvolvimento e manutenção de sistemas computacionais. Durante o
-        curso, os estudantes aprendem a projetar e implementar soluções
-        tecnológicas que atendem às necessidades de empresas e organizações.
-      </p>
-      <h2 class="titulo">Disciplinas</h2>
-      <ul>
-        <li class="card">
-          <img src="https://github.com/deividfrancis.png" alt="" />
-          <div class="card-content">
-            <h3>Desenvolvimento de aplicações para internet</h3>
-            <p>
-              Estudo de linguagem de programação para desenvolvimento de
-              aplicações voltados para Internet. Desenvolvimento de aplicações
-              Web cliente/servidor. Tecnologias Web. HTML. Linguagens de
-              programação para Web. Arquitetura de aplicações Web. Usabilidade,
-              tendências e frameworks para desenvolvimento Web.
-            </p>
-            <hr />
-            <span>Prof: Deivid</span>
-            <span class="sala">Sala: 112</span>
-          </div>
-        </li>
-      </ul>
-    </section>
-    <footer>
-      <p>&copy; 2024 Faculdade UNINASSAU. Todos os direitos reservados.</p>
-    </footer>
-  </body>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pamonha - Receita</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdeee1;
+            color: #5C4033;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fdeee1;
+        }
+
+        .header img {
+            max-width: 250px;
+            height: auto;
+            margin-right: 30px;
+        }
+
+        .header-content {
+            max-width: 600px;
+        }
+
+        .header h1 {
+            font-size: 4.5em;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 1.8em;
+            margin: 10px 0;
+            color: #8A795D;
+        }
+
+        .recipe-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #8A795D;
+            padding: 80px 20px;
+            color: #FFF;
+            min-height: 300px;
+            margin-top: 30px;
+        }
+
+        .recipe-section {
+            flex: 1;
+            min-width: 300px;
+            max-width: 450px;
+            margin: 20px;
+            box-sizing: border-box;
+        }
+
+        .recipe-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 25px;
+        }
+
+        .recipe-section ul, .recipe-section ol {
+            font-size: 1.5em;
+            line-height: 1.8em;
+            padding-left: 25px;
+        }
+
+        .recipe-section h2::before {
+            content: ' ';
+            display: inline-block;
+            margin-right: 15px;
+            vertical-align: middle;
+            background: url('https://img.icons8.com/material-rounded/24/FFFFFF/shopping-basket-2.png') no-repeat;
+            width: 24px;
+            height: 24px;
+        }
+
+        .recipe-section:nth-child(2) h2::before {
+            background: url('https://img.icons8.com/material-rounded/24/FFFFFF/cooking-pot.png') no-repeat;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://misty-sodalite-5dd.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F26ef5e10-fb44-4d91-9f31-bbaefb8368e3%2F5ddaf2f3-d9ae-483c-8616-28b26de18509%2Filustracao-de-pamonha.png?table=block&id=ebc3561e-3f9a-4df8-b9bf-76b5400742f4&spaceId=26ef5e10-fb44-4d91-9f31-bbaefb8368e3&width=820&userId=&cache=v2" alt="Pamonha">
+            <div class="header-content">
+                <h1>Pamonha</h1>
+                <p>Prato típico com milho verde</p>
+                <p>Porções 01</p>
+            </div>
+        </div>
+
+        <div class="recipe-container">
+            <div class="recipe-section">
+                <h2>Ingredientes</h2>
+                <ul>
+                    <li>1 espiga de milho verde</li>
+                    <li>1 colher de sopa de açúcar</li>
+                    <li>1 colher de sopa de manteiga</li>
+                    <li>Sal a gosto</li>
+                    <li>Palha de milho (para embrulhar)</li>
+                </ul>
+            </div>
+
+            <div class="recipe-section">
+                <h2>Modo de preparo</h2>
+                <ol>
+                    <li>Descasque a espiga de milho e corte os grãos.</li>
+                    <li>Bata o milho, açúcar, manteiga e sal no liquidificador.</li>
+                    <li>Coloque a massa nas palhas de milho e feche bem.</li>
+                    <li>Cozinhe em água fervente por cerca de 40 minutos.</li>
+                    <li>Deixe esfriar e sirva.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
